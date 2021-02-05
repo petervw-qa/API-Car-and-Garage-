@@ -36,17 +36,38 @@
     <div> 
        <p>Click the buttons depending on what you want to do </p>
     </div>
-    <button type="button" class="btn btn-primary" > Create </button>
-    <button type="button" class="btn btn-secondary"> Read </button>
-    <button type="button" class="btn btn-success"> Update </button>
-    <button type="button" class="btn btn-danger"> Delete </button>
-
-
-
-
-
-
-
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Create
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create a Car</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <input type="Name" placeholder="Enter Name" id="name">
+            <input type="Make" placeholder="Enter Make" id="make">
+            <input type="Model" placeholder="Enter Model" id="model">
+            <input type="Doors" placeholder="Enter Number of Doors" id="doors">
+            <input type="Colour" placeholder="Enter Colour" id="colour">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="postToCar()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        <button type="button" class="btn btn-secondary" onclick="">Read</button>
+        <button type="button" class="btn btn-success" onclick="">Update</button>
+        <button type="button" class="btn btn-danger" onclick="">Delete</button>
     <script src = "car.js"></script>
     <script src ="garage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
