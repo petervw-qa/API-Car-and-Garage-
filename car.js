@@ -41,3 +41,26 @@ fetch("http:localhost:9092/car/create",{
 .catch((err)=> console.error(err));
 
 }
+
+// Read by ID
+
+const getGarageByID = ()=> {
+
+    const params = new URLSearchParams(window.location.search);
+    console.log(param);
+    for(const param of params){
+        console.log(param);
+    }
+    let id = params.get("id");
+    console.log(`the id is ${id}`);
+    fetch(`http:localhost:9092/car/read/${id}`)
+      .then((response) => {
+        if (response.status !== 200) {
+          console.error(`status ${response.status}`);
+          return;
+        }
+        response.json().then((data) => console.info(data));
+      })
+      .catch((err) => console.error(err));
+    
+    }
